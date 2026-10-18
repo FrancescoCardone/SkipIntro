@@ -1,0 +1,8 @@
+{
+  "name": "AutoSkip Repository",
+  "description": "Repository personale con AutoSkip Intro",
+  "manifestVersion": 1,
+  "pluginLists": [
+    "https://raw.githubusercontent.com/FrancescoCardone/SkipIntro/builds/plugins.json"
+  ]
+}
