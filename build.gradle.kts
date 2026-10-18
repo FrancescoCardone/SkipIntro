@@ -40,9 +40,10 @@ subprojects {
     android {
         namespace = "com.lagradost"
 
+        compileSdkVersion(35)
+
         defaultConfig {
             minSdk = 21
-            compileSdk = 35
             targetSdk = 35
         }
 
