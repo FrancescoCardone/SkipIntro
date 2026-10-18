@@ -10,7 +10,8 @@ buildscript {
 
     dependencies {
         classpath("com.android.tools.build:gradle:8.7.3")
-        classpath("com.github.recloudstream:gradle:master-SNAPSHOT")
+        // Usiamo un commit stabile su JitPack invece di master-SNAPSHOT che è rotto
+        classpath("com.github.recloudstream:gradle:cce1b8f815")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:2.1.0")
     }
 }
@@ -63,11 +64,11 @@ subprojects {
     }
 
     dependencies {
-        val cloudstream by configurations
+        val apk by configurations
         val implementation by configurations
 
-        // Stubs for all Cloudstream classes
-        cloudstream("com.lagradost:cloudstream3:pre-release")
+        // Con il commit stabile cce1b8f815 o v0.1.2, la configurazione si chiama 'apk' (o 'cloudstream' nelle nuovissime)
+        apk("com.lagradost:cloudstream3:pre-release")
 
         implementation(kotlin("stdlib"))
         implementation("com.github.Blatzar:NiceHttp:0.4.11")
